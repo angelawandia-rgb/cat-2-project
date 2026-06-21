@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Zuri Café</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">☕ Zuri Café</a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header text-white text-center py-5">
+    <div class="container">
+      <h1>Gallery</h1>
+      <p class="lead">A peek into life at Zuri Café</p>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <button class="btn btn-outline-dark gallery-filter-btn active me-2 mb-2" data-filter="all">All</button>
+        <button class="btn btn-outline-dark gallery-filter-btn me-2 mb-2" data-filter="coffee">Coffee</button>
+        <button class="btn btn-outline-dark gallery-filter-btn me-2 mb-2" data-filter="food">Food</button>
+        <button class="btn btn-outline-dark gallery-filter-btn me-2 mb-2" data-filter="events">Events</button>
+      </div>
+
+      <div class="row g-4" id="galleryGrid">
+
+        <div class="col-md-4 gallery-item" data-category="coffee">
+          <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Latte art on a coffee cup">
+          <p class="text-center mt-2 mb-0 fw-bold">Latte Art</p>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="food">
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Avocado toast on sourdough">
+          <p class="text-center mt-2 mb-0 fw-bold">Avocado Toast</p>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Live acoustic performance at the cafe">
+          <p class="text-center mt-2 mb-0 fw-bold">Open Mic Night</p>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="coffee">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Espresso being poured">
+          <p class="text-center mt-2 mb-0 fw-bold">Espresso Pour</p>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="food">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Display of fresh pastries">
+          <p class="text-center mt-2 mb-0 fw-bold">Pastry Display</p>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Weekend market pop-up stall">
+          <p class="text-center mt-2 mb-0 fw-bold">Weekend Market Pop-up</p>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="coffee">
+          <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Cold brew coffee station">
+          <p class="text-center mt-2 mb-0 fw-bold">Cold Brew Station</p>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="food">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Close-up of a savoury pie">
+          <p class="text-center mt-2 mb-0 fw-bold">Beef Pie Close-up</p>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="events">
+          <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&h=400&fit=crop" class="gallery-img rounded" alt="Musician playing guitar live">
+          <p class="text-center mt-2 mb-0 fw-bold">Live Acoustic Set</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-1">© 2026 Zuri Café, Nairobi. All rights reserved.</p>
+      <small>
+        <a href="about.html" class="text-warning me-2">About</a>
+        <a href="menu.html" class="text-warning me-2">Menu</a>
+        <a href="contact.html" class="text-warning">Contact</a>
+      </small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
