@@ -277,3 +277,12 @@ html {
 .is-invalid ~ .invalid-feedback {
   display: block;
 }
+/* ===== TESTIMONIAL PHOTOS ===== */
+.testimonial-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--zuri-gold);
+  flex-shrink: 0;
+}
