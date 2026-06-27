@@ -88,38 +88,68 @@ section {
 }
 /* ===== MENU PAGE STYLES ===== */
 
-.menu-category-title {
-  border-bottom: 3px solid var(--zuri-gold);
-  padding-bottom: 10px;
-  display: inline-block;
+/* Category block wrapper */
+.menu-category-block {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
 }
 
-/* Each menu row (name + price) */
+/* Category header row with icon + title */
+.menu-category-header {
+  border-bottom: 3px solid var(--zuri-gold);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+/* Large emoji icon next to category title */
+.menu-category-icon {
+  font-size: 2rem;
+}
+
+/* Category title text */
+.menu-category-title {
+  font-size: 1.6rem;
+  color: var(--zuri-brown);
+  font-weight: 700;
+}
+
+/* Individual menu row */
 .menu-item {
   padding: 16px 20px;
-  margin-bottom: 12px;
-  background-color: #fff;
-  border: 1px solid #eee;
+  background-color: #f8f9fa;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 0.2s ease;
+  border-left: 4px solid var(--zuri-gold);
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .menu-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Price styling - gives it its own visual weight, separated from the name */
-.menu-item .menu-price {
-  color: var(--zuri-gold);
-  font-size: 1.05rem;
-  white-space: nowrap;
-  margin-left: 20px;
-}
-
-/* Item name + description block */
-.menu-item .menu-info h6 {
+/* Item name */
+.menu-info h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c2c2c;
   margin-bottom: 4px;
+}
+
+/* Price badge */
+.menu-price {
+  background-color: var(--zuri-gold);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 /* ===== GALLERY PAGE STYLES ===== */
 
