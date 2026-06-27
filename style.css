@@ -1,18 +1,19 @@
 /* ===== ZURI CAFÉ — CUSTOM STYLES ===== */
 
-/* --- Colour variables: change these two lines to retheme the whole site --- */
+/* --- Colour variables --- */
 :root {
   --zuri-brown: #4a2c17;
   --zuri-gold:  #d4a843;
 }
 
 /* --- Hero section background --- */
-/* We use a dark brown colour since we don't have a photo yet */
 .hero-section {
-  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+  background-color: var(--zuri-brown);
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url('https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=1400&h=800&fit=crop');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   min-height: 85vh;
   padding: 60px 20px;
 }
@@ -30,24 +31,50 @@
 
 /* --- Card hover effect --- */
 .card {
-  transition: transform 0.2s ease;   /* Smooth animation */
+  transition: transform 0.2s ease;
   border: none;
 }
 .card:hover {
-  transform: translateY(-5px);        /* Card lifts slightly on hover */
+  transform: translateY(-5px);
 }
 
 /* --- Buttons use our gold colour --- */
 .btn-warning {
   background-color: var(--zuri-gold);
   border-color: var(--zuri-gold);
-  color: #fff;
+  color: #1a1a1a;
   font-weight: 600;
 }
 .btn-warning:hover {
   background-color: #b8902e;
   border-color: #b8902e;
   color: #fff;
+}
+
+/* --- Hero section background --- */
+.hero-section {
+  background: linear-gradient(135deg, #4a2c17 0%, #2c1a0e 60%, #6b3d1e 100%);
+  min-height: 85vh;
+  padding: 60px 20px;
+}
+
+/* --- Hero outline button --- */
+.hero-outline-btn {
+  border: 2px solid #ffffff;
+  color: #ffffff !important;
+  background: transparent;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 28px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background 0.2s ease, color 0.2s ease;
+  line-height: 1.5;
+}
+.hero-outline-btn:hover {
+  background-color: #ffffff;
+  color: #1a1a1a !important;
 }
 
 /* --- Footer links --- */
@@ -60,18 +87,17 @@ footer a:hover {
 
 /* --- General spacing helper --- */
 section {
-  scroll-margin-top: 70px;  /* So anchor links don't hide under the sticky navbar */
+  scroll-margin-top: 70px;
 }
+
 /* ===== ABOUT PAGE STYLES ===== */
 
-/* Small header banner used on inner pages (About, Menu, etc.) */
 .page-header {
   background-color: var(--zuri-brown);
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* Placeholder box standing in for a real photo for now */
 .about-img-placeholder {
   background-color: #ccc;
   height: 320px;
@@ -79,16 +105,36 @@ section {
   color: #555 !important;
 }
 
-/* Circular placeholder for team member photos */
 .team-avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: var(--zuri-gold);
 }
+
+/* Team member circular photos */
+.team-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid var(--zuri-gold);
+}
+
+/* Value icons on mission cards */
+.value-icon {
+  font-size: 2.5rem;
+}
+
+/* About page story image */
+.about-story-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 /* ===== MENU PAGE STYLES ===== */
 
-/* Category block wrapper */
 .menu-category-block {
   background-color: #fff;
   border-radius: 16px;
@@ -97,26 +143,22 @@ section {
   margin-bottom: 30px;
 }
 
-/* Category header row with icon + title */
 .menu-category-header {
   border-bottom: 3px solid var(--zuri-gold);
   padding-bottom: 12px;
   margin-bottom: 20px;
 }
 
-/* Large emoji icon next to category title */
 .menu-category-icon {
   font-size: 2rem;
 }
 
-/* Category title text */
 .menu-category-title {
   font-size: 1.6rem;
   color: var(--zuri-brown);
   font-weight: 700;
 }
 
-/* Individual menu row */
 .menu-item {
   padding: 16px 20px;
   background-color: #f8f9fa;
@@ -131,7 +173,6 @@ section {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Item name */
 .menu-info h6 {
   font-size: 1rem;
   font-weight: 600;
@@ -139,7 +180,6 @@ section {
   margin-bottom: 4px;
 }
 
-/* Price badge */
 .menu-price {
   background-color: var(--zuri-gold);
   color: #fff;
@@ -151,13 +191,13 @@ section {
   align-self: flex-start;
   flex-shrink: 0;
 }
+
 /* ===== GALLERY PAGE STYLES ===== */
 
-/* Real photo styling instead of placeholder boxes */
 .gallery-img {
   width: 100%;
   height: 220px;
-  object-fit: cover;   /* Crops photo neatly to fill the box without stretching */
+  object-fit: cover;
 }
 
 .gallery-filter-btn.active {
@@ -165,63 +205,56 @@ section {
   color: #fff;
   border-color: var(--zuri-gold);
 }
+
 /* ===== BLOG PAGE STYLES ===== */
 
-/* Placeholder image box at the top of each blog card */
-.blog-img-placeholder {
-  background-color: #999;
-  height: 160px;
-  font-style: italic;
+.blog-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
+
 /* ===== TESTIMONIALS PAGE STYLES ===== */
 
-/* Small circular placeholder for customer photo */
 .testimonial-avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: var(--zuri-brown);
-  flex-shrink: 0;   /* Stops it from squishing on small screens */
+  flex-shrink: 0;
 }
 
-/* Subtle left border accent on each testimonial card */
 .testimonial-card {
   border-left: 4px solid var(--zuri-gold);
-  border-radius: 0;  /* Square corners look better with a side accent border */
+  border-radius: 0;
 }
+
 /* ===== CONTACT PAGE STYLES ===== */
 
-/* Map placeholder box */
 .map-placeholder {
   background-color: var(--zuri-brown);
   height: 200px;
   font-style: italic;
 }
 
-/* Make invalid form fields clearly red-bordered */
 .is-invalid {
   border-color: #dc3545 !important;
 }
 .is-invalid ~ .invalid-feedback {
   display: block;
 }
-/* ===== BLOG CARD IMAGE ===== */
-.blog-card-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-/* ===== ABOUT PAGE UPDATES ===== */
-
-/* Team member circular photos */
-.team-photo {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border: 4px solid var(--zuri-gold);
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Value icons on mission cards */
-.value-icon {
-  font-size: 2.5rem;
+/* ===== NAVBAR HOVER ===== */
+.nav-link:hover {
+  color: var(--zuri-gold) !important;
+}
+
+/* ===== ACTIVE NAV LINK ===== */
+.nav-link.active {
+  color: var(--zuri-gold) !important;
+  font-weight: 600;
 }
