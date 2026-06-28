@@ -6,6 +6,7 @@
   --zuri-gold:  #d4a843;
   --zuri-bg:    #e8f5e8;
 }
+
 /* --- Global background --- */
 body {
   background-color: #e8f5e8;
@@ -51,8 +52,10 @@ body {
   color: #fff;
 }
 
-/* --- Hero buttons hover effect --- */
-.hero-btn {
+/* --- Hero buttons --- */
+a.hero-btn,
+a.hero-btn:link,
+a.hero-btn:visited {
   background-color: #d4a843;
   border: 2px solid #d4a843;
   color: #1a1a1a;
@@ -63,16 +66,26 @@ body {
   text-decoration: none;
   display: inline-block;
   line-height: 1.5;
-  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+              border-color 0.3s ease,
+              color 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
 }
-.hero-btn:hover {
-  background-color: #b8902e;
-  border-color: #b8902e;
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
+
+a.hero-btn:hover,
+a.hero-btn:focus,
+a.hero-btn:active {
+  background-color: #8b5e00 !important;
+  border-color: #8b5e00 !important;
+  color: #ffffff !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  text-decoration: none !important;
+  outline: none;
 }
+
 /* --- Footer links --- */
 footer a {
   text-decoration: none;
@@ -113,7 +126,6 @@ html {
   object-fit: cover;
 }
 
-
 /* ===== PAGE HEADER ===== */
 .page-header {
   background-color: var(--zuri-brown);
@@ -126,7 +138,6 @@ html {
 .page-header .container {
   width: 100%;
 }
-
 
 /* ===== ABOUT PAGE STYLES ===== */
 
@@ -144,7 +155,6 @@ html {
   background-color: var(--zuri-gold);
 }
 
-/* Team member circular photos */
 .team-photo {
   width: 120px;
   height: 120px;
@@ -152,19 +162,16 @@ html {
   border: 4px solid var(--zuri-gold);
 }
 
-/* Value icons on mission cards */
 .value-icon {
   font-size: 2.5rem;
 }
 
-/* About page story image */
 .about-story-img {
   width: 100%;
   height: 320px;
   object-fit: cover;
   border-radius: 10px;
 }
-
 
 /* ===== MENU PAGE STYLES ===== */
 
@@ -225,7 +232,6 @@ html {
   flex-shrink: 0;
 }
 
-
 /* ===== GALLERY PAGE STYLES ===== */
 
 .gallery-img {
@@ -240,7 +246,6 @@ html {
   border-color: var(--zuri-gold);
 }
 
-
 /* ===== BLOG PAGE STYLES ===== */
 
 .blog-card-img {
@@ -248,7 +253,6 @@ html {
   height: 180px;
   object-fit: cover;
 }
-
 
 /* ===== TESTIMONIALS PAGE STYLES ===== */
 
@@ -265,7 +269,6 @@ html {
   border-radius: 0;
 }
 
-
 /* ===== CONTACT PAGE STYLES ===== */
 
 .map-placeholder {
@@ -280,6 +283,7 @@ html {
 .is-invalid ~ .invalid-feedback {
   display: block;
 }
+
 /* ===== TESTIMONIAL PHOTOS ===== */
 .testimonial-photo {
   width: 60px;
