@@ -8,6 +8,31 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Hero button styles directly in the page so they always work -->
+  <style>
+    .hero-btn {
+      background-color: #d4a843 !important;
+      border: 2px solid #d4a843 !important;
+      color: #1a1a1a !important;
+      font-weight: 700 !important;
+      font-size: 1.1rem !important;
+      padding: 12px 30px !important;
+      border-radius: 6px !important;
+      text-decoration: none !important;
+      display: inline-block !important;
+      line-height: 1.5 !important;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    .hero-btn:hover {
+      background-color: #8b5e00 !important;
+      border-color: #8b5e00 !important;
+      color: #ffffff !important;
+      transform: translateY(-4px) !important;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;
+      text-decoration: none !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -42,14 +67,8 @@
       <h1 class="display-3 fw-bold">Welcome to Zuri Café</h1>
       <p class="lead mt-3">Nairobi's cosiest corner for great coffee, fresh food & good vibes.</p>
       <div class="mt-4 d-flex justify-content-center flex-wrap gap-3">
-        <a href="menu.html"
-          style="background-color: #d4a843; border: 2px solid #d4a843; color: #1a1a1a; font-weight: 700; font-size: 1.1rem; padding: 12px 30px; border-radius: 6px; text-decoration: none; display: inline-block; line-height: 1.5;">
-          View Our Menu
-        </a>
-        <a href="contact.html"
-          style="background-color: #d4a843; border: 2px solid #d4a843; color: #1a1a1a; font-weight: 700; font-size: 1.1rem; padding: 12px 30px; border-radius: 6px; text-decoration: none; display: inline-block; line-height: 1.5;">
-          Reserve a Table
-        </a>
+        <a href="menu.html" class="hero-btn">View Our Menu</a>
+        <a href="contact.html" class="hero-btn">Reserve a Table</a>
       </div>
     </div>
   </section>
